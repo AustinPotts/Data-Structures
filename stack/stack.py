@@ -39,4 +39,4 @@ class Stack:
              return None
          else:
              top = self.storage.pop(-1)
-             return top
+             return top.value
