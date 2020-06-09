@@ -1,3 +1,5 @@
+
+
 class Node:
     def __init__(self, value=None, next_node=None):
         self.value = value 
@@ -81,5 +83,8 @@ class LinkedList:
                 max_value = current.get_value()
             current = current.get_next()
         return max_value
+
+
+
 
 
