@@ -36,6 +36,12 @@ class LinkedList:
             self.tail.set_next(new_node)
             # set the list's tail reference to the new node
             self.tail = new_node
+            
+     def make_new_head(self, value):
+         new_node = Node(value)
+         previous_head = self.head
+         self.head = new_node
+         self.head.set_next(previous_head)
 ​
     def remove_head(self):
         # return None if there is no head (i.e. the list is empty)
