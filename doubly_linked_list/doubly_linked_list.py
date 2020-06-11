@@ -92,7 +92,7 @@ class DoublyLinkedList:
          # if the head and tail are none
          # set the head and tail to the new node created
          if not self.head and not self.tail:
-             self.head = new_node
+             self.head = new_node #set pointers to new node
              self.tail = new_node
              # else set the previous node on the new node to the tail
              # set the next on the tail to the new node
@@ -146,13 +146,13 @@ class DoublyLinkedList:
          pass
 
          # set the length of the list to minus 1
-         self.length -= 1
+         self.length -= 1 #This should be moved under the if block, because if block will check the dll
 
          # if there is no head or tail return out of the function
          if not self.head and not self.tail:
              return
 
-         # if the head and tail are the same we only have one node
+         # if the head and tail are the same we only have one node. If DLL has one element remove it by setting pointers to none 
          # remove its references and will be deleted
          if self.head == self.tail:
              self.head = None
@@ -168,11 +168,11 @@ class DoublyLinkedList:
          # set the tail equal to the pervious node and remove the references to the tail
          elif self.tail == node:
              self.tail = self.tail.prev
-             node.delete()
+             node.delete() #Node Class Delete 
 
          # else the node is somewhere in the middle remove references to the node passed in
          else:
-             node.delete()
+             node.delete() #more than 3 nodes in our DLL & not head or tail, delete connections don't worry about pointers
 
      """Returns the highest value currently in the list"""
 
